@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <!--success>Always</success-->
+        <operations>
+
+            <!-- Enable this if you don't want the mask to hide beards >
+
+            <li Class="PatchOperationTest">
+                <xpath>Defs/ThingDef[defName="Apparel_VisageMask"]/apparel/bodyPartGroups</xpath>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Apparel_VisageMask"]/apparel/bodyPartGroups</xpath>
+                <value>
+                    <bodyPartGroups>
+                        <li>Eyes</li>
+                        <li>Teeth</li>
+                    </bodyPartGroups>
+                </value>
+            </li-->
+
+            <!-- Change <layers> to EyeCover -->
+            <li Class="PatchOperationTest">
+                <xpath>Defs/ThingDef[defName="Apparel_VisageMask"]/apparel/layers</xpath>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Apparel_VisageMask"]/apparel/layers</xpath>
+                <value>
+                    <layers>
+                        <li>EyeCover</li>
+                    </layers>
+                </value>
+            </li>
+
+            <!-- Disable rendering at front of face. Do this via replace rather than remove. -->
+            <li Class="PatchOperationTest">
+                <xpath>Defs/ThingDef[defName="Apparel_VisageMask"]/apparel/hatRenderedFrontOfFace</xpath>
+            </li>
+            <li Class="PatchOperationReplace">
+                <xpath>Defs/ThingDef[defName="Apparel_VisageMask"]/apparel/hatRenderedFrontOfFace</xpath>
+                <value>
+                    <hatRenderedFrontOfFace>false</hatRenderedFrontOfFace>
+                </value>
+            </li>
+
+            <!-- Force render under hair -->
+            <li Class="PatchOperationTest">
+                <xpath>Defs/ThingDef[defName="Apparel_VisageMask"]/apparel/forceRenderUnderHair</xpath>
+                <success>Invert</success>
+            </li>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/ThingDef[defName="Apparel_VisageMask"]/apparel</xpath>
+                <value>
+                    <forceRenderUnderHair>true</forceRenderUnderHair>
+                </value>
+            </li>
+
+        </operations>
+    </Operation>
+</Patch>
