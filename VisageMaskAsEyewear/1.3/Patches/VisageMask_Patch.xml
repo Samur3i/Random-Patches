@@ -2,10 +2,10 @@
 
 <Patch>
     <Operation Class="PatchOperationSequence">
-        <!--success>Always</success-->
+        <success>Always</success>
         <operations>
 
-            <!-- Enable this if you don't want the mask to hide beards >
+            <!-- Enable this patch if you don't want the mask to hide beards >
 
             <li Class="PatchOperationTest">
                 <xpath>Defs/ThingDef[defName="Apparel_VisageMask"]/apparel/bodyPartGroups</xpath>
