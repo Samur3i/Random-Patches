@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
-    <identifier>INFERR_VisageMaskAsEyewear</identifier>
-    <version>1.0.0</version>
-    <dependencies>
-        <li>Ideology</li>
-    </dependencies>
-    <loadAfter>
-        <li>Ideology</li>
-    </loadAfter>
+    <identifier>VisageMaskAsEyewear</identifier>
+    <version>1.0.1</version>
     <manifestUri>https://raw.githubusercontent.com/Samur3i/Random-Patches/main/VisageMaskAsEyewear/About/Manifest.xml</manifestUri>
 </Manifest>
